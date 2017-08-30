@@ -1,5 +1,7 @@
 # SEOlicous Rails Tools
 
+never mind, this has to be out in shape and cleared up soon...
+
 ## what's it all about
 
 In every project we face we have to handle serveral SEO tasks, and basically every page we build should be somehow shareable via Facebook/Twitter etc.
