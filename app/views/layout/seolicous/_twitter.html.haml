@@ -1,0 +1,9 @@
+%meta{property: 'twitter:card', content: SocialMediaAndSeo.twitter_card_type}
+- if SocialMediaAndSeo.twitter_user_name
+  %meta{property: 'twitter:site', content: SocialMediaAndSeo.twitter_user_name}
+
+- if @seo_page
+  %meta{property: 'twitter:title', content: @seo_page.og_title.presence || @seo_page.title}
+  %meta{property: 'twitter:description', content: @seo_page.og_description.presence || @seo_page.meta_description}
+  - if @seo_page.seo_og_image_url.present?
+    %meta{property: 'twitter:image:src', content: img_url}

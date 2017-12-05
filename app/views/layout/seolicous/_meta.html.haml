@@ -1,0 +1,13 @@
+%meta{:charset => "utf-8"}
+%meta{:content => "IE=Edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+%meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+%meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}
+%link{rel: "canonical", href: seo_canonical_url }
+
+- if @seo_page
+  - seo_page_title(@seo_page.title)
+
+  - if @seo_page.meta_description.present?
+    %meta{name: 'description', content: @seo_page.meta_description}
+  - if @seo_page.meta_keywords.present?
+    %meta{name: 'keywords', content: @seo_page.meta_keywords}
