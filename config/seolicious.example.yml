@@ -1,0 +1,24 @@
+# Use the following values to configure the plugin:
+
+# used for open graoh website name  
+website_name: 'My Website'  
+
+# Default prefix/suffix for title tag content:
+title_prefix: ''
+title_suffix: ''
+
+# character for joining title , prefic and suffix
+title_connector: ' - '
+  
+## Property ID for Google (UA-XXXXX-0)
+google_analytics_id: ''
+
+# Tracking mode ga/gtag to use analytics.js or gtag.js
+google_tracking_mode: 'ga'
+
+# Look of twitter cards  The card type, which will be one of “summary”, “summary_large_image”, “app”, or “player”.
+twitter_card_type: 'summary_large_image'
+
+# twitter user name related to your website '@pageowner'
+twitter_user_name: ''
+

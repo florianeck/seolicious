@@ -1,5 +1,5 @@
 %meta{property: 'twitter:card', content: SocialMediaAndSeo.twitter_card_type}
-- if SocialMediaAndSeo.twitter_user_name
+- if SocialMediaAndSeo.twitter_user_name.present?
   %meta{property: 'twitter:site', content: SocialMediaAndSeo.twitter_user_name}
 
 - if @seo_page

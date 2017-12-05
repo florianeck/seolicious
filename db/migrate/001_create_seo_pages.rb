@@ -2,6 +2,7 @@ class CreateSeoPages < ActiveRecord::Migration
   
   def change
     create_table "seo_pages", force: :cascade do |t|
+      t.string  "name",            limit: 255
       t.string  "controller_name",  limit: 255
       t.string  "action_name",      limit: 255
       t.text    "params_json",      limit: 65535

@@ -1,9 +1,9 @@
-module SeolicousBaseHelper
+module SeoliciousBaseHelper
   
-  def seolicous_include(*args)
+  def seolicious_include(*args)
     out = []
     args.each do |arg|
-      out << render("layouts/seolicous/#{arg}")
+      out << render("seolicious/#{arg}")
     end
     
     raw(out.join)
@@ -13,15 +13,15 @@ module SeolicousBaseHelper
     [
       request.base_url,
       @seo_page.try(:canonical_name).presence || request.path
-    ].join("/")
+    ].join("")
   end
   
   def seo_page_title(title)
     joined_title = [
-      SocialMediaAndSeo.title_prefix,
+      Seolicious.title_prefix.presence,
       title,
-      SocialMediaAndSeo.title_suffix,      
-    ].compact.join(SocialMediaAndSeo.title_connector)
+      Seolicious.title_suffix.presence,      
+    ].compact.join(Seolicious.title_connector)
     
     @page_title = joined_title
     content_for(:page_title) do

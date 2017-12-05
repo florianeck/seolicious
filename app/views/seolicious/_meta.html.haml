@@ -5,9 +5,11 @@
 %link{rel: "canonical", href: seo_canonical_url }
 
 - if @seo_page
-  - seo_page_title(@seo_page.title)
+  %title= seo_page_title(@seo_page.title)
 
   - if @seo_page.meta_description.present?
     %meta{name: 'description', content: @seo_page.meta_description}
   - if @seo_page.meta_keywords.present?
     %meta{name: 'keywords', content: @seo_page.meta_keywords}
+- else
+  %title= @page_title
