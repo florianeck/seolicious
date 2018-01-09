@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.test_files  =   Dir.glob("test/**/*")
   s.homepage    = 'https://github.com/florianeck/seolicious'
 
-  s.add_dependency "rails", ">= 4.0.4"
+  s.add_dependency "rails"
   s.add_dependency 'carrierwave'
   s.add_dependency 'rmagick'
 end
