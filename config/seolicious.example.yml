@@ -22,3 +22,5 @@ twitter_card_type: 'summary_large_image'
 # twitter user name related to your website '@pageowner'
 twitter_user_name: ''
 
+facebook_app_id: ''
+
