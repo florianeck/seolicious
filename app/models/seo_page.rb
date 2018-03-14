@@ -20,5 +20,9 @@ class SeoPage < ActiveRecord::Base
   def seo_og_image_url
     @_seo_og_image_url ||= self.og_image.try(:url, :large)
   end
+  
+  def seo_og_image_url=(url)
+    @_seo_og_image_url = url
+  end
 
 end

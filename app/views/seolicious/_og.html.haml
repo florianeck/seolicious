@@ -1,8 +1,11 @@
 %meta{property: 'og:type',      content: 'website'}
 %meta{property: 'og:site_name', content: Seolicious.website_name }
 %meta{property: 'og:url',       content: seo_canonical_url}
+
 - if @seo_page
   %meta{property: 'og:title',       content: @seo_page.og_title.presence || @page_title || @seo_page.title.presence }
   %meta{property: 'og:description', content: @seo_page.og_description.presence || @seo_page.meta_description }
   - if @seo_page.seo_og_image_url.present?
     %meta{property: 'og:image', content: @seo_page.seo_og_image_url}
+- else
+  %meta{property: 'og:title',       content: @page_title }  
