@@ -21,8 +21,20 @@ class SeoPage < ActiveRecord::Base
     @_seo_og_image_url ||= self.og_image.try(:url, :large)
   end
   
+  def name
+    self[:name] || fallback_name
+  end
+  
+  def title
+    self[:title] || fallback_name
+  end
+  
   def seo_og_image_url=(url)
     @_seo_og_image_url = url
   end
-
+  
+  private
+  def fallback_name
+    "#{controller_name}/#{action_name}/#{params_json}"
+  end
 end
