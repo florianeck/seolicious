@@ -9,11 +9,11 @@ class OgImageUploader < CarrierWave::Uploader::Base
   end
 
   version :large do
-    resize_to_fill(1200,630)
+    resize_to_fill(SeoPage.og_img_width_large,SeoPage.og_img_height_large)
   end
 
   version :small do
-    resize_to_fill(600,315)
+    resize_to_fill(SeoPage.og_img_width_small,SeoPage.og_img_height_small)
   end
 
   version :thumb do

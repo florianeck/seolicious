@@ -1,4 +1,4 @@
-%meta{property: 'og:type',      content: 'website'}
+%meta{property: 'og:type',      content: (@seo_page.try(:og_type) || 'website')}
 %meta{property: 'og:site_name', content: Seolicious.website_name }
 %meta{property: 'og:url',       content: seo_canonical_url}
 
